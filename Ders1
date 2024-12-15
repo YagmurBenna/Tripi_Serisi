@@ -1,0 +1,42 @@
+Serinin ilk bölümüne hoş geldiniz Ben Yağmur Canalp,
+Sizlere Mikroişlemcilerin, ASIC’in ve FPGA’in ne olduğundan ve hangi koşullar altında tercih edilmesi gerektiğinden bahsedeceğim. İlerleyen videolarda bizim ana temamız olan FPGA’e odaklanacağınız. Sizlere iyi seyirler diliyorum.
+
+Herhangi bir FPGA kart  gördüğünüzde belki de içinizden ona mikroişlemci demek gelmiştir. Peki FPGA karta böyle isim vermek mümkün müdür? Mümkün değilse neden ikisini aynı başlık altına koyamıyoruz?
+Bunları örnekler üzerinden anlamaya çalışalım.
+
+Diyelim ki ben bir elektronik kart kullanarak dört işlem yapabilen bir cihaz yapmak istiyorum. Bu cihazı mikroişlemciler ile yapmak istersem o mikroişlemcinin datasheetini okuyup projenin gerçekleştirilebilir olup olmadığına bakmam gerekir.
+
+Bu cihazı FPGA ile yapmak istersem FPGA içinde dört işlem yapabilen bir tasarım yapmalıyım. 
+
+Diyelim ki ben Bilgisayarımla bir elektronik kartı haberleştirmek istiyorum. Bunu mikroişlemciler ile yapmak istersem o mikroişlemcinin hangi haberleşme protokollerine sahip olduğuna bakmam gerekir.
+
+Bunu FPGA ile yapmak istersem tek yapmam gereken bu haberleşme protokolünü sağlayacak donanımı tasarlamak olur.
+
+Özetlersek Mikroişlemci kullanarak bir proje yapacaksam, Mikroişlemcide istediğim özelliklerin olup olmamasına bakmam gerekecek.
+Fakat FPGA de böyle bir durum söz konusu değil çünkü istediğim şeyleri zaten ben tasarlayıp kullanabiliyorum. 
+
+
+Bir diğer Başlığımızda ASIC, peki ASIC’in FPGA ile Mikroişlemciler arasındaki farkı ney. Neden ayriyeten bir başlık atmaya ihtiyaç duymuşuz?
+
+FPGA içerisinde birbiri ile bağlantı yapmayı bekleyen çok fazla sayıda mantık elemanları vardır. Bu mantık elemanlarını biz yazdığımız kodla birlikte birbirlerine bağlarız bu sayede istediğimiz donanımı tasarlamış oluruz. 
+
+
+Örnek:
+Tekrardan FGPA tanımını yaptıktan sonra bir şirket sahibi olduğumuzu düşünelim. Bize güneş ışığından enerji üreten bir cihaz tasarlamamızı istediler. Ve tahmin edersiniz ki bunu 3 farklı cihaz tipini kullanarak tasarlayabiliriz.  
+
+FPGA ile tasarlarsak ne olur?
+FPGA’in içinde milyonlarca milyarlarca mantık kapıları mevcut. Peki bizim projemiz tam olarak kaç tane mantık bloğu kullanabilir? Anlaşılacağı üzere eğer belli bir proje için bir FPGA kart kullanırsak, Donanımı yüksek miktarda kullanamayacağımız için israf yapmış oluruz. Mantık kapılarının kapladığı alan az olduğu için israf dendiğimde tam anlaşılmayabilir. Fakat İsraf olduğunu şu şekilde anlayabiliriz FPGA kart almak maliyetli bir olaydır.
+
+Mikroişlemci ile tasarlarsak ne olur?
+Kendimize en uygun mikroişlemciyi seçersek FPGA kullandığımız duruma göre daha karlı bir şekilde projemizi gerçekleştiririz. Fakat şu soruyu sormalıyız bizim projemiz, mikroişlemcinin sahip olduğu bütün özellikleri kullanacak mı? Bunun cevabı da hayır olacak ve biz yine bir şekilde bir israf yapmış olacağız. Mikroişlemcilerinde boyutu küçük olduğundan israfı satın alma maliyeti açısından yorumlamalıyız.
+
+ASIC ile tasarlarsak ne olur?
+ASIC donanımı özel ve biriciktir. Tasarımcı nasıl tasarlarsa o şekilde olur. ASIC tasarımları bir olaya özgü yapılır. Yani Eğer projemizi yapmak için ASIC yöntemini seçersek hiçbirşeyi israf etmemiş oluruz. Fakat ASIC’de de şöyle bir sıkıntı söz konusu, bir proje için sadece 1 tane kart tasarlayacaksak ASIC bizim için tam bir israf olur
+
+ASIC te donanımı tamamen kullandık ve hiçbir elektronik elamanı israf etmedik, o zaman sıkıntı ney? Sıkıntı şu: ASIC’in üretme maliyeti çok fazla. Bunun sebebi ise projelere özgü tasarlanmasıdır yani tasarlanması için yüklü bir para harcanır, basılması içinde yüklü bir para harcanır. O zaman ASIC’i hiçbir zaman tercih etmemeli miyiz? Tabii ki hayır. ASIC ne zaman karlı olur derseniz:
+
+Eğer bir cihazdan 5000 10000 1 milyon tane üreteceksek o zaman ASIC bizim için en karlı seçenek olmuş oluyor. Sadece ilk başta mühendislerin tasarlaması için para harcamamız gerecek. Basan yerde kaç tane basarsak basalım yaklaşık aynı fiyatı alacağından ASIC tadından yenmez bir hale bürünüyor.
+
+
+
+
