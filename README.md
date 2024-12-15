@@ -1,0 +1,1 @@
+Derste anlatılanların notları bulunuyor
